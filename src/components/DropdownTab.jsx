@@ -8,15 +8,15 @@ function DropdownItem(props) {
   return (
     // should use grid for this
     <div className="text-neutral-600 p-0 m-0">
-      <section className="grid grid-flow-row grid-cols-6 w-full justify-between items-stretch">
-        <div className="border border-black col-span-1 flex justify-center items-center">
+      <section className="grid grid-flow-row grid-cols-6 lg:grid-cols-8 w-full justify-between items-stretch">
+        <div className="border border-black col-span-1  flex justify-center items-center">
           <Checkbox></Checkbox>
         </div>
-        <div className="border border-black border-l-0 col-span-3  flex justify-center items-center">
+        <div className="border border-black border-l-0 col-span-3 lg:col-span-4  flex justify-center items-center">
           {/* link to problem */}
           <a href={problem.url}>{problem.name}</a>
         </div>
-        <div className="border border-black border-l-0 col-span-1 flex justify-center items-center">
+        <div className="border border-black border-l-0 col-span-1 lg:col-span-2 flex justify-center items-center">
           <p>{problem.difficulty}</p>
         </div>
         <div className="border border-black border-l-0 col-span-1 flex justify-center items-center">
@@ -44,7 +44,7 @@ function DropdownTab(props) {
   console.log("dropdown tab");
   console.log(props);
   return (
-    <div class="py-5">
+    <div class="text-sm lg:text-base">
       <details class="group">
         <summary class="bg-black text-white p-2 select-none flex justify-between items-center font-medium cursor-pointer list-none">
           <span>{props.problemSet.problemType}</span>
