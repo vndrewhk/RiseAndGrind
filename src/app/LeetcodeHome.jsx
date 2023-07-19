@@ -8,7 +8,10 @@ function LeetcodeHome() {
       min-w-full
   px-[5vw] 
   lg:px-[15vw]
-  lg:min-h-[105vh] bg-green-300 pt-12 pb-12 lg:pb-0"
+  lg:min-h-[105vh]
+  bg-green-300
+
+  pt-12 pb-12 lg:pb-0"
     >
       <div className="justify-center">
         <p className="font-semibold w-fit outline outline-2 outline-black p-2 mr-2 -translate-x-2 lg:-translate-x-4">
@@ -26,7 +29,7 @@ function LeetcodeHome() {
               With personalized tracking and expert guidance, master the art of
               problem-solving and level up your coding skills like never before.
             </p>
-            <Link href="/">
+            <Link href="/leetcode">
               <button className="inline-block text-xl lg:text-4xl mt-auto w-fit h-fit bg-black text-white rounded-xl p-2 lg:p-3">
                 LeetCode Guides
               </button>

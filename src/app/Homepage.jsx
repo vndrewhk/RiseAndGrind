@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 function Homepage() {
   return (
     <section
@@ -25,8 +26,16 @@ function Homepage() {
 
       {/* image boxes */}
       <div className=" flex flex-col lg:flex-row justify-center items-center gap-y-2 lg:gap-x-2 lg:pt-10">
-        <img src="https://placehold.co/600x400"></img>
-        <img src="https://placehold.co/600x400"></img>
+        <Link href="/leetcode">
+          
+            <img src="https://placehold.co/600x400"></img>
+         
+        </Link>
+        <Link href="/career">
+        
+            <img src="https://placehold.co/600x400"></img>
+         
+        </Link>
       </div>
       <div></div>
     </section>

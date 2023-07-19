@@ -7,7 +7,10 @@ function CareerHome() {
     min-w-full
 px-[5vw] 
 lg:px-[15vw]
-lg:min-h-[105vh] bg-yellow-200 pt-12 pb-12 lg:pb-0"
+lg:min-h-[105vh]
+  
+ bg-gradient-to-t from-yellow-200 from-[97%] to-green-300
+ pt-12 pb-12 lg:pb-0"
     >
       <div className="justify-center">
         <p className="font-semibold w-fit outline outline-2 outline-black p-2 mr-2 -translate-x-2 lg:-translate-x-4">
@@ -27,7 +30,7 @@ lg:min-h-[105vh] bg-yellow-200 pt-12 pb-12 lg:pb-0"
               harness the skills necessary to excel in any software development
               endeavor.
             </p>
-            <Link href="/" className="">
+            <Link href="/career" className="">
               <button className="inline-block text-xl lg:text-4xl mt-auto w-fit h-fit bg-black text-white rounded-xl p-2 lg:p-3">
                 Learn Skills
               </button>
