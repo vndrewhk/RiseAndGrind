@@ -63,42 +63,28 @@ export default function Home() {
           </p>
         </div>
         <div className="flex justify-center">
-          <Grid container columnSpacing={{ xs: 3 }}>
-            <Grid item xs={12} md={4} >
-              <ImgMediaCard 
-                text="Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-"
-                url="https://wwww.bing.ca/"
-                image="https://placehold.co/600x400/EEE/31343C"
-              ></ImgMediaCard>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <ImgMediaCard
-                text="Here's a list of resources I've used throughout my career.
-
-Here's a list of resources I've used throughout my career.
-"
-                url="https://wwww.bing.ca/"
-                image="https://placehold.co/600x400/EEE/31343C"
-              ></ImgMediaCard>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <ImgMediaCard
-                text="Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-Here's a list of resources I've used throughout my career.
-"
-                url="https://wwww.bing.ca/"
-                image="https://placehold.co/600x400/EEE/31343C"
-              ></ImgMediaCard>
-            </Grid>
-          </Grid>
+          <div className="grid grid-flow-row gap-8 lg:gap-16 auto-rows-fr grid-cols-1 lg:grid-cols-2 mt-auto">
+            <ImgMediaCard
+              image="https://placehold.co/600x400/EEE/31343C"
+              title="The Odin Project"
+              description="Here's a list of resources I've used throughout my career."
+            ></ImgMediaCard>
+            <ImgMediaCard
+              image="https://placehold.co/600x400/EEE/31343C"
+              title="The Odin Project"
+              description="Here's a list of resources I've used throughout my career. Here's a list of resources I've used throughout my career.Here's a list of resources I've used throughout my career."
+            ></ImgMediaCard>{" "}
+            <ImgMediaCard
+              image="https://placehold.co/600x400/EEE/31343C"
+              title="The Odin Project"
+              description="Here's a list of resources I've used throughout my career."
+            ></ImgMediaCard>{" "}
+            <ImgMediaCard
+              image="https://placehold.co/600x400/EEE/31343C"
+              title="The Odin Project"
+              description="Here's a list of resources I've used throughout my career."
+            ></ImgMediaCard>
+          </div>
         </div>
       </section>
     </main>
