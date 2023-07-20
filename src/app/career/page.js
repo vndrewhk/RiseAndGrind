@@ -1,16 +1,106 @@
 import CareerHome from "../CareerHome";
 import LeetcodeHome from "../LeetcodeHome";
 import Homepage from "../homepage";
-
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import ImgMediaCard from "./ImgMediaCard";
+import { Grid } from "@mui/material";
 export default function Home() {
   // homepage
   return (
     <main className="ml-auto mr-auto flex min-h-screen  max-w-[100vw]   flex-col items-center ">
       {/* home section */}
-      careere
-      <Homepage></Homepage>
-      <LeetcodeHome></LeetcodeHome>
-      <CareerHome></CareerHome>
+
+      {/* group of resources, odinproject, mdn, w3schools? */}
+      <section
+        className="flex flex-col
+      px-[5vw] 
+      lg:px-[15vw]
+      lg:min-h-[90vh]  pt-12
+      gap-y-4
+      animate-fade-in
+    
+     "
+      >
+        {/* Hero Text*/}
+        <div className="flex flex-col lg:flex-row h-2/3 min-w-full justify-center items-center ">
+          <div className="flex flex-col items-center space-y-8">
+            <h1 className="text-3xl lg:text-6xl lg:w-4/6">
+              Here's a list of resources I've used throughout my career.
+            </h1>
+            <p>
+              Over the years I've come across many tutorials, websites, and
+              resources to learn and gain skills.
+              <br></br>
+              Here are the ones that I've found the most useful. I hope you find
+              them helpful too.
+            </p>
+            <button className="inline-block mt-auto w-fit h-fit bg-black text-white rounded-full p-2 lg:p-3">
+              <ArrowDownwardIcon></ArrowDownwardIcon>
+            </button>
+          </div>
+
+          {/* button to point down */}
+        </div>
+
+        {/* image boxes */}
+
+        <div></div>
+      </section>
+
+      <section
+        className="flex flex-col
+      min-w-full
+  px-[5vw] 
+  lg:px-[15vw]
+  lg:min-h-[105vh]
+  bg-green-300
+
+  pt-12 pb-12 lg:pb-0"
+      >
+        <div className="justify-center">
+          <p className="font-semibold w-fit outline outline-2 outline-black p-2 mr-2 -translate-x-2 lg:-translate-x-4">
+            LeetCode
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <Grid container columnSpacing={{ xs: 3 }}>
+            <Grid item xs={12} md={4} >
+              <ImgMediaCard 
+                text="Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+"
+                url="https://wwww.bing.ca/"
+                image="https://placehold.co/600x400/EEE/31343C"
+              ></ImgMediaCard>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <ImgMediaCard
+                text="Here's a list of resources I've used throughout my career.
+
+Here's a list of resources I've used throughout my career.
+"
+                url="https://wwww.bing.ca/"
+                image="https://placehold.co/600x400/EEE/31343C"
+              ></ImgMediaCard>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <ImgMediaCard
+                text="Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+Here's a list of resources I've used throughout my career.
+"
+                url="https://wwww.bing.ca/"
+                image="https://placehold.co/600x400/EEE/31343C"
+              ></ImgMediaCard>
+            </Grid>
+          </Grid>
+        </div>
+      </section>
     </main>
   );
 }

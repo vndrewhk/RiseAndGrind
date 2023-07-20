@@ -36,7 +36,7 @@ function Dropdown() {
       ],
     },
     {
-      problemType: "Arrays & Hashing",
+      problemType: "Stacks",
       problems: [
         {
           solved: false,
@@ -58,7 +58,7 @@ function Dropdown() {
 
   return (
     <div>
-      <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen min-w-[75vw] lg:min-w-[50vw] bg-red-200">
+      <div class="max-w-screen-xl mx-auto px-5 bg-white min-h-sceen min-w-[75vw] lg:min-w-[50vw] ">
         <div class="flex flex-col items-center">
           <h2 class="font-bold text-5xl mt-5 tracking-tight border-b-2  border-black">
             Blind75 Questions
