@@ -30,7 +30,7 @@ function LeetcodeHome() {
               problem-solving and level up your coding skills like never before.
             </p>
             <Link href="/leetcode">
-              <button className="inline-block text-xl lg:text-4xl mt-auto w-fit h-fit bg-black text-white rounded-xl p-2 lg:p-3">
+              <button className="hover:scale-105 duration-75 inline-block text-xl lg:text-4xl mt-auto w-fit h-fit bg-black text-white rounded-xl p-2 lg:p-3">
                 LeetCode Guides
               </button>
             </Link>

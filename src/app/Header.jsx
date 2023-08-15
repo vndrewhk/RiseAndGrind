@@ -15,20 +15,20 @@ function Header() {
       <div className="flex items-center lg:gap-x-4">
         <Link
           href="/leetcode"
-          className="invisible lg:visible duration-150 hover:outline outline-2 outline-black p-2"
+          className="invisible lg:visible  hover:outline outline-2 outline-black p-2"
         >
           LeetCode
         </Link>
         <Link
           href="/career"
-          className="invisible lg:visible duration-150 hover:outline outline-2 outline-black p-2"
+          className="invisible lg:visible  hover:outline outline-2 outline-black p-2"
         >
           Career
         </Link>
         {/* <Link href="/" className="invisible lg:visible">Resources</Link> */}
         <Link
           href="/"
-          className="invisible lg:visible  duration-150 hover:outline outline-2 outline-black p-2"
+          className="invisible lg:visible   hover:outline outline-2 outline-black p-2"
         >
           Log in
         </Link>

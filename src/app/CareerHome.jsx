@@ -31,7 +31,7 @@ lg:min-h-[105vh]
               endeavor.
             </p>
             <Link href="/career" className="">
-              <button className="inline-block text-xl lg:text-4xl mt-auto w-fit h-fit bg-black text-white rounded-xl p-2 lg:p-3">
+              <button className="hover:scale-105 duration-75 inline-block text-xl lg:text-4xl mt-auto w-fit h-fit bg-black text-white rounded-xl p-2 lg:p-3">
                 Learn Skills
               </button>
             </Link>
