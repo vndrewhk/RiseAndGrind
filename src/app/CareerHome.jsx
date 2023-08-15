@@ -8,7 +8,6 @@ function CareerHome() {
 px-[5vw] 
 lg:px-[15vw]
 lg:min-h-[105vh]
-  
  bg-gradient-to-t from-yellow-200 from-[97%] to-green-300
  pt-12 pb-12 lg:pb-0"
     >
