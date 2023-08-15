@@ -10,7 +10,6 @@ function Header() {
           src="/logo.png"
           className="cursor-pointer object-contain transition hover:scale-110"
         ></img>
-        {/* </a> */}
       </Link>
       <div className="flex items-center lg:gap-x-4">
         <Link
