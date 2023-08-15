@@ -25,7 +25,7 @@ function LeetcodeHome() {
         </h1>
         <div className="flex flex-col lg:flex-row gap-x-16">
           <div className="space-y-4 lg:space-y-8 pb-4">
-            <p className="text-xl leading-5 lg:leading-6 pb-4">
+            <p className="text-xl  pb-4 leading-normal md:leading-6 ">
               With personalized tracking and expert guidance, master the art of
               problem-solving and level up your coding skills like never before.
             </p>

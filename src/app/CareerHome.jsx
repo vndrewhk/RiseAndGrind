@@ -23,10 +23,10 @@ lg:min-h-[105vh]
         </h1>
         <div className="flex flex-col lg:flex-row-reverse gap-x-16">
           <div className="space-y-4 lg:space-y-8 pb-4">
-            <p className="text-xl leading-5 lg:leading-6 py-4 lg:py-8">
+            <p className="text-xl  pb-4 leading-normal md:leading-6 ">
               From programming languages and algorithms to software engineering
-              principles and best practices, unlock a world of knowledge and
-              harness the skills necessary to excel in any software development
+              principles, unlock a world of knowledge and
+              harness the skills to excel in any software development
               endeavor.
             </p>
             <Link href="/career" className="">
