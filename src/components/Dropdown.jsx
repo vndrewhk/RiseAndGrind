@@ -10,7 +10,7 @@ function Dropdown() {
   //         name: "Contains Duplicate",
   //         difficulty: "Easy",
   //         solution: "https://www.google.ca/",
-  //         url: "https://www.bing.ca/",
+  //         url: "https://www.bing.ca",
   //       },
   //     },
   //   };
