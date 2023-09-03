@@ -1,9 +1,8 @@
 "use client"
 import { SessionProvider } from "next-auth/react";
 import CareerHome from "./CareerHome";
-import Header from "./Header";
 import LeetcodeHome from "./LeetcodeHome";
-import Homepage from "./homepage";
+import Homepage from "./Homepage";
 
 export default function Home() {
   // homepage
