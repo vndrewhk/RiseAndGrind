@@ -1,17 +1,24 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-const FaqsCard = (props) => {
+const ProblemTypeRow = (props) => {
   const answerElRef = useRef();
   const [state, setState] = useState(false);
   const [answerH, setAnswerH] = useState("0px");
-  const { faqsList, idx } = props;
+  const { problemType, idx } = props;
 
   const handleOpenAnswer = () => {
     const answerElH = answerElRef.current.childNodes[0].offsetHeight;
+
     setState(!state);
     setAnswerH(`${answerElH + 20}px`);
   };
+
+  const handleOpenSize = () => {
+    const answerElH = answerElRef.current.childNodes[0].offsetHeight;
+    setAnswerH(`${answerElH + 20}px`);
+  };
+  console.log(problemType);
 
   return (
     <div className="space-y-3 mt-5 overflow-hidden border-b" key={idx}>
@@ -21,7 +28,7 @@ const FaqsCard = (props) => {
         hover:bg-gray-200 pt-2 pl-2
         cursor-pointer pb-5 flex items-center justify-between text-lg text-gray-700 font-medium"
       >
-        {faqsList.q}
+        {problemType.name}
         {state ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +38,9 @@ const FaqsCard = (props) => {
             stroke="currentColor"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
               d="M20 12H4"
             />
           </svg>
@@ -57,40 +64,130 @@ const FaqsCard = (props) => {
       <div
         ref={answerElRef}
         className="duration-300"
+        // this controls height of row
         style={state ? { height: answerH } : { height: "0px" }}
       >
         <div>
-          <p className="text-gray-500">{faqsList.a}</p>
+          {problemType.problems.map((problem) => {
+            console.log(problem);
+            return (
+              <ProblemRow
+                problems={problem}
+                handleOpenSize={handleOpenSize}
+                key={problem.id}
+              ></ProblemRow>
+            );
+          })}
+          {/* <ProblemRow problem = {problem}/> */}
+          {/* <p className="text-gray-500">text</p> */}
         </div>
       </div>
     </div>
   );
 };
 
+const ProblemRow = (props) => {
+  // probably add default solution to this one
+
+  const { problems, handleOpenSize, idx } = props;
+  const [isOpen, setIsOpen] = useState(false);
+  console.log(problems);
+
+  const handleOpenSolution = () => {
+    console.log("triggered");
+    setIsOpen(!isOpen);
+  };
+  return (
+    <div>
+      <div onClick={handleOpenSolution}>{problems.name}</div>
+
+      <div className={isOpen ? "visible" : "hidden"}>
+        {problems.solutions.map((solutions) => {
+          return (
+            <SolutionRow
+              solutions={solutions}
+              key={solutions.userId}
+              isOpen={isOpen}
+              handleOpenSize={handleOpenSize}
+            ></SolutionRow>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+const SolutionRow = (props) => {
+  const { solutions, isOpen, handleOpenSize, idx } = props;
+  useEffect(() => {
+    handleOpenSize();
+  }, [isOpen]);
+
+  return <div>{solutions.description}</div>;
+};
+
 export default () => {
-  const faqsList = [
+  let solutions = [
     {
-      q: "What are some random questions to ask?",
-      a: "That's exactly the reason we created this random question generator. There are hundreds of random questions to choose from so you're able to find the perfect random question.",
+      name: "Arrays & Hashing",
+      id: "asojdlik",
+      problems: [
+        {
+          name: "Reverse a String",
+          id: "diasop",
+          order: 0,
+          problemType: 1,
+          difficulty: "Easy",
+          solutions: [
+            {
+              user: "Andrew",
+              userId: "2189eud1",
+              description: "This is a solution",
+              ytUrl: "https://www.google.ca",
+              problem: "uw9q0dj",
+            },
+            {
+              user: "Myles",
+              userId: "321qeud1",
+              description: "This is a 2nd solution",
+              ytUrl: "https://www.bing.ca",
+              problem: "dsakpqow",
+            },
+          ],
+        },
+      ],
     },
     {
-      q: "Do you include common questions?",
-      a: "This generator doesn't include most common questions. The thought is that you can come up with common questions on your own so most of the questions in this generator.",
-    },
-    {
-      q: "Can I use this for 21 questions?",
-      a: "Yes! there are two ways that you can use this question generator depending on what you're after. You can indicate that you want 21 questions generated.",
-    },
-    {
-      q: "Are these questions for girls or for boys?",
-      a: "The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).",
-    },
-    {
-      q: "What do you wish you had more talent doing?",
-      a: "If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.",
+      name: "Stacks and Queues",
+      id: "asoidjk",
+      problems: [
+        {
+          name: "Palindrome",
+          id: "sajdiaow",
+          order: 1,
+          problemType: 1,
+          difficulty: "Medium",
+          solutions: [
+            {
+              user: "Andrew",
+              userId: "2189eud1",
+              description: "This is a palindrome solution",
+              ytUrl: "https://www.google.ca",
+              problem: "uw9q0dj",
+            },
+            {
+              user: "Myles",
+              userId: "321qeud1",
+              description: "This is a 2nd palindrome solution",
+              ytUrl: "https://www.bing.ca",
+              problem: "dsakpqow",
+            },
+          ],
+        },
+      ],
     },
   ];
-
+  solutions = solutions.sort();
   return (
     <section className="leading-relaxed  mt-12 mx-auto px-4 md:px-8 min-w-[75vw]">
       <div className="space-y-3 text-center">
@@ -103,9 +200,18 @@ export default () => {
         </p>
       </div>
       <div className="mt-14 max-w-[75vw] mx-auto">
-        {faqsList.map((item, idx) => (
-          <FaqsCard idx={idx} faqsList={item} />
-        ))}
+        {solutions.map((problemType, idx) => {
+          return (
+            <ProblemTypeRow
+              key={problemType.id}
+              problemType={problemType}
+              idx={idx}
+            ></ProblemTypeRow>
+          );
+        })}
+        {/* {faqsList.map((item, idx) => (
+          <ItemCard idx={idx} faqsList={item} />
+        ))} */}
       </div>
     </section>
   );
