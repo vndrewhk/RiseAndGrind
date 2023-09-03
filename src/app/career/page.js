@@ -4,6 +4,7 @@ import Homepage from "../homepage";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ImgMediaCard from "./ImgMediaCard";
 import { Grid } from "@mui/material";
+import CardPanel from "./CardPanel";
 export default function Home() {
   // homepage
   return (
@@ -13,9 +14,10 @@ export default function Home() {
       {/* group of resources, odinproject, mdn, w3schools? */}
       <section
         className="flex flex-col
+        min-h-[90vh]
       px-[5vw] 
       lg:px-[15vw]
-      lg:min-h-[90vh]  pt-12
+      lg:min-h-[90vh]  pt-12 lg:pt-32
       gap-y-4
       animate-fade-in
     
@@ -57,7 +59,8 @@ export default function Home() {
 
   pt-12 pb-12 lg:pb-0"
       >
-        <div className="justify-center">
+        <CardPanel></CardPanel>
+        {/* <div className="justify-center">
           <p className="font-semibold w-fit outline outline-2 outline-black p-2 mr-2 -translate-x-2 lg:-translate-x-4">
             LeetCode
           </p>
@@ -85,7 +88,7 @@ export default function Home() {
               description="Here's a list of resources I've used throughout my career."
             ></ImgMediaCard>
           </div>
-        </div>
+        </div> */}
       </section>
     </main>
   );

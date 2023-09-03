@@ -2,6 +2,7 @@ import LeetcodeHome from "../LeetcodeHome";
 import CareerHome from "../CareerHome";
 import Homepage from "../homepage";
 import Dropdown from "@/components/Dropdown";
+import LeetcodeTable from "./LeetcodeTable";
 
 export default function Home() {
   // homepage
@@ -10,10 +11,8 @@ export default function Home() {
       {/* home section */}
       {/* leetcode */}
       <section>
-
-
-
-        <Dropdown></Dropdown>
+        <LeetcodeTable></LeetcodeTable>
+        {/* <Dropdown></Dropdown> */}
       </section>
     </main>
   );
