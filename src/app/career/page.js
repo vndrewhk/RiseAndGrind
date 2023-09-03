@@ -1,9 +1,5 @@
-import CareerHome from "../CareerHome";
-import LeetcodeHome from "../LeetcodeHome";
-import Homepage from "../homepage";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ImgMediaCard from "./ImgMediaCard";
-import { Grid } from "@mui/material";
+
 import CardPanel from "./CardPanel";
 export default function Home() {
   // homepage

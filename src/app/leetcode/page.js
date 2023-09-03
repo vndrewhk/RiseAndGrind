@@ -1,7 +1,4 @@
-import LeetcodeHome from "../LeetcodeHome";
-import CareerHome from "../CareerHome";
-import Homepage from "../homepage";
-import Dropdown from "@/components/Dropdown";
+
 import LeetcodeTable from "./LeetcodeTable";
 
 export default function Home() {
