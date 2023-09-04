@@ -10,7 +10,7 @@ function Header() {
   let [authModal, setAuthModal] = useState(false);
   const { data: session, status } = useSession();
   useEffect(() => {
-    if (status === authenticated) {
+    if (status === "authenticated") {
       console.log(session);
     }
   }, [session]);
