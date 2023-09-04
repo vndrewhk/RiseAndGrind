@@ -10,7 +10,7 @@ function Header() {
   let [authModal, setAuthModal] = useState(false);
   const { data: session, status } = useSession();
   useEffect(() => {
-    if (session !== null) {
+    if (session === true && session !== null && typeof session !== undefined) {
       console.log(session);
     }
   }, [session]);
