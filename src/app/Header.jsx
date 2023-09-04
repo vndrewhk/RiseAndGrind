@@ -11,7 +11,8 @@ function Header() {
   const { data: session, status } = useSession();
   useEffect(() => {
     if (status === "authenticated") {
-      console.log(session);
+      console.log("authenticated with info", session);
+      // console.log(session);
     }
   }, [session]);
   return (
