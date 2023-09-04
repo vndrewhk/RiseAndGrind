@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import AuthModal from "@/components/AuthModal";
@@ -9,7 +9,11 @@ import { useSession } from "next-auth/react";
 function Header() {
   let [authModal, setAuthModal] = useState(false);
   const { data: session, status } = useSession();
-  console.log(session)
+  useEffect(() => {
+    if (session) {
+      console.log(session);
+    }
+  }, [session]);
   return (
     <div className="outline-1 outline-black outline min-h-[10vh] p-2 sm:p-1  lg:p-3 max-h-[10vh] flex flex-row justify-between">
       <Link href="/" className="min-h-[100%] flex select-none">
