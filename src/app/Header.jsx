@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 import AuthModal from "@/components/AuthModal";
-import { useSession } from "next-auth/react";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 function Header() {
   let [authModal, setAuthModal] = useState(false);
