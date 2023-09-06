@@ -45,7 +45,7 @@ export default function Home() {
               them helpful too.
             </p>
             <button
-              className="inline-block mt-auto w-fit h-fit bg-black text-white rounded-full p-2 lg:p-3 cursor-pointer"
+              className="inline-block mt-auto w-fit h-fit bg-black text-white rounded-full p-2 lg:p-3 cursor-pointer hover:scale-110 duration-75 animate-bounce"
               onClick={scrollToElement}
             >
               <ArrowDownwardIcon></ArrowDownwardIcon>
