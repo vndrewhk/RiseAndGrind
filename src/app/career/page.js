@@ -1,7 +1,19 @@
+"use client";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-
 import CardPanel from "./CardPanel";
+import { useRef } from "react";
 export default function Home() {
+  const elementRef = useRef(null);
+
+  const scrollToElement = () => {
+    if (elementRef.current) {
+      elementRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   // homepage
   return (
     <main className="ml-auto mr-auto flex min-h-screen  max-w-[100vw]   flex-col items-center ">
@@ -32,7 +44,10 @@ export default function Home() {
               Here are the ones that I've found the most useful. I hope you find
               them helpful too.
             </p>
-            <button className="inline-block mt-auto w-fit h-fit bg-black text-white rounded-full p-2 lg:p-3">
+            <button
+              className="inline-block mt-auto w-fit h-fit bg-black text-white rounded-full p-2 lg:p-3 cursor-pointer"
+              onClick={scrollToElement}
+            >
               <ArrowDownwardIcon></ArrowDownwardIcon>
             </button>
           </div>
@@ -52,8 +67,8 @@ export default function Home() {
   lg:px-[15vw]
   lg:min-h-[105vh]
   bg-green-300
-
-  pt-12 pb-12 lg:pb-0"
+   pb-12 "
+        ref={elementRef}
       >
         <CardPanel></CardPanel>
         {/* <div className="justify-center">
