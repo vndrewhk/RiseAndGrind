@@ -99,7 +99,12 @@ const ProblemRow = (props) => {
   };
   return (
     <div>
-      <div onClick={handleOpenSolution}>{problems.name}</div>
+      <div
+        onClick={handleOpenSolution}
+        className="hover:bg-gray-300 border-b-2 border-transparent hover:border-black  cursor-pointer"
+      >
+        {problems.name}
+      </div>
 
       <div className={isOpen ? "visible" : "hidden"}>
         {problems.solutions.map((solutions) => {
@@ -192,11 +197,10 @@ export default () => {
     <section className="leading-relaxed  mt-12 mx-auto px-4 md:px-8 min-w-[75vw]">
       <div className="space-y-3 text-center">
         <h1 className="text-3xl text-gray-800 font-semibold">
-          Frequently Asked Questions
+          Leetcode Problems
         </h1>
-        <p className="text-gray-600 max-w-lg mx-auto text-lg">
-          Answered all frequently asked questions, Still confused? feel free to
-          contact us.
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          Find user submitted solutions down below, or submit your own.
         </p>
       </div>
       <div className="mt-14 max-w-[75vw] mx-auto">
